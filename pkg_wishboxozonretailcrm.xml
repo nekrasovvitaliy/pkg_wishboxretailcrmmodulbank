@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" method="upgrade">
+	<name>pkg_wishboxretailcrmmodulbank</name>
+	<packagename>wishboxretailcrmmodulbank</packagename>
+	<author>Nekrasov Vitaliy</author>
+	<authorEmail>nekrasov_vitaliy@list.ru</authorEmail>
+	<creationDate>October 2026</creationDate>
+	<version>1.0.0</version>
+	<packager>Nekrasov Vitaliy</packager>
+	<description>PKG_WISHBOXRETAILCRMMODULBANK_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/pkg_wishboxretailcrmmodulbank.sys.ini</language>
+		<language tag="ru-RU">ru-RU/pkg_wishboxretailcrmmodulbank.sys.ini</language>
+	</languages>
+	<files>
+		<file type="component" id="com_wishboxretailcrmmodulbank">com_wishboxretailcrmmodulbank.zip</file>
+		<file type="library" id="wishboxretailcrmmodulbank">lib_wishboxretailcrmmodulbank.zip</file>
+		<file type="plugin" group="task" id="wishboxretailcrmmodulbank">plg_task_wishboxretailcrmmodulbank.zip</file>
+		<file type="plugin" group="webservices" id="wishboxretailcrmmodulbank">plg_webservices_wishboxretailcrmmodulbank.zip</file>
+	</files>
+</extension>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+	<name>com_wishboxretailcrmmodulbank</name>
+	<author>Nekrasov Vitaliy</author>
+	<authorEmail>nekrasov_vitaliy@list.ru</authorEmail>
+	<creationDate>October 2026</creationDate>
+	<version>1.0.0</version>
+	<description>COM_WISHBOXRETAILCRMMODULBANK_XML_DESCRIPTION</description>
+	<namespace path="src">Joomla\Component\WishboxRetailCrmModulBank</namespace>
+	<administration>
+		<menu img="class:link">COM_WISHBOXRETAILCRMMODULBANK</menu>
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<folder>services</folder>
+			<folder>src</folder>
+			<folder>tmpl</folder>
+		</files>
+		<languages folder="administrator/language">
+			<language tag="en-GB">en-GB/com_wishboxretailcrmmodulbank.ini</language>
+			<language tag="en-GB">en-GB/com_wishboxretailcrmmodulbank.sys.ini</language>
+			<language tag="ru-RU">ru-RU/com_wishboxretailcrmmodulbank.ini</language>
+			<language tag="ru-RU">ru-RU/com_wishboxretailcrmmodulbank.sys.ini</language>
+		</languages>
+	</administration>
+	<api>
+		<files folder="api">
+			<folder>src</folder>
+		</files>
+	</api>
+	<media destination="com_wishboxretailcrmmodulbank" folder="media">
+		<folder>images</folder>
+	</media>
+</extension>

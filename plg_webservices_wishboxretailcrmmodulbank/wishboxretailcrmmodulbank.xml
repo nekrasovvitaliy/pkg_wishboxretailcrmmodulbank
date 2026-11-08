@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="webservices" method="upgrade">
+	<name>plg_webservices_wishboxretailcrmmodulbank</name>
+	<author>Nekrasov Vitaliy</author>
+	<creationDate>October 2026</creationDate>
+	<authorEmail>nekrasov_vitaliy@list.ru</authorEmail>
+	<version>1.0.0</version>
+	<description>PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_XML_DESCRIPTION</description>
+	<namespace path="src">Joomla\Plugin\Webservices\WishboxRetailCrmModulBank</namespace>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<folder plugin="wishboxretailcrmmodulbank">services</folder>
+		<folder>src</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/plg_webservices_wishboxretailcrmmodulbank.ini</language>
+		<language tag="en-GB">language/en-GB/plg_webservices_wishboxretailcrmmodulbank.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/plg_webservices_wishboxretailcrmmodulbank.ini</language>
+		<language tag="ru-RU">language/ru-RU/plg_webservices_wishboxretailcrmmodulbank.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="ozon" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELDSET_OZON_LABEL">
+				<field name="webhook_token" type="password" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_WEBHOOK_TOKEN_LABEL" description="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_WEBHOOK_TOKEN_DESC" required="true" filter="raw" />
+				<field name="ozon_client_id" type="text" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_OZON_CLIENT_ID_LABEL" required="true" filter="raw" />
+				<field name="ozon_api_key" type="password" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_OZON_API_KEY_LABEL" required="true" filter="raw" />
+				<field name="ozon_api_url" type="url" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_OZON_API_URL_LABEL" default="https://api-seller.ozon.ru" required="true" filter="raw" />
+			</fieldset>
+			<fieldset name="retailcrm" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELDSET_RETAILCRM_LABEL">
+				<field name="retailcrm_api_url" type="url" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_RETAILCRM_API_URL_LABEL" required="true" filter="raw" />
+				<field name="retailcrm_proxy_token" type="password" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_RETAILCRM_PROXY_TOKEN_LABEL" filter="raw" />
+				<field name="retailcrm_api_key" type="password" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_RETAILCRM_API_KEY_LABEL" required="true" filter="raw" />
+				<field name="retailcrm_site" type="text" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_RETAILCRM_SITE_LABEL" required="true" filter="cmd" />
+				<field name="ozon_sku_property" type="text" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_OZON_SKU_PROPERTY_LABEL" default="ozon_sku" required="true" filter="cmd" />
+				<field name="retailcrm_price_type" type="text" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_RETAILCRM_PRICE_TYPE_LABEL" default="base" required="true" filter="cmd" />
+				<field name="retailcrm_offer_lookup_limit" type="number" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_OFFER_LOOKUP_LIMIT_LABEL" default="10000" min="1" max="100000" filter="integer" />
+			</fieldset>
+			<fieldset name="orders" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELDSET_ORDERS_LABEL">
+				<field name="order_import_limit" type="number" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_ORDER_IMPORT_LIMIT_LABEL" default="10" min="1" max="1000" filter="integer" />
+				<field name="order_lookback_days" type="number" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_ORDER_LOOKBACK_LABEL" default="5" min="1" max="365" filter="integer" />
+				<field name="ozon_order_statuses" type="text" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_ORDER_STATUSES_LABEL" default="awaiting_packaging" filter="raw" />
+				<field name="order_currency" type="text" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_ORDER_CURRENCY_LABEL" default="RUB" required="true" filter="cmd" />
+				<field name="retailcrm_order_type" type="text" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_ORDER_TYPE_LABEL" default="eshop-individual" required="true" filter="cmd" />
+				<field name="retailcrm_order_method" type="text" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_ORDER_METHOD_LABEL" default="shopping-cart" required="true" filter="cmd" />
+				<field name="retailcrm_order_status" type="text" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_ORDER_STATUS_LABEL" default="new" required="true" filter="cmd" />
+				<field name="retailcrm_marketplace_code" type="text" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_MARKETPLACE_CODE_LABEL" filter="cmd" />
+				<field name="retailcrm_ozon_posting_field" type="text" label="PLG_WEBSERVICES_WISHBOXRETAILCRMMODULBANK_FIELD_OZON_POSTING_FIELD_LABEL" filter="cmd" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
